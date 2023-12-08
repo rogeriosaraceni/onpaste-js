@@ -51,6 +51,9 @@ window.addEventListener("load", () => {
                 }
             };
         }
+
+        //Enable Fancybox
+        Fancybox.bind("[data-fancybox-onpaste]");
     }
     
     onpaste()
