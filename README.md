@@ -26,7 +26,9 @@
 
 
 
-
+<p>
+    <a href="https://onpaste-js.vercel.app/" target="_blank">Exemple: onpaste-js.vercel.app</a>
+</p>
 <p>
     Developed by Rogério Saraceni.
 </p>
