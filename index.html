@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-br" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Onpaste JS</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+        <link rel="stylesheet" href="./assets/onpaste/onpaste.css">
+    </head>
+
+    <body class="d-flex flex-column h-100">
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Onpaste JS</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex-shrink-0">
+            <section class="container py-4">
+                <h6>Onpaste JS</h6>
+                <ul>
+                    <li>Onpaste JS: v1.0.0</li>
+                    <li>Version Date: 08/12/2023</li>
+                </ul>
+
+                <h6>Vendors</h6>
+                <ul>
+                    <li>
+                        <a href="https://getbootstrap.com/" target="_blank">Bootstrap v5.3.2</a>
+                    </li>
+                    <li>
+                        <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons v1.11.2</a>
+                    </li>
+                    <li>
+                        <a href="https://icons.getbootstrap.com/" target="_blank">fancybox v5.0</a>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <p class="text-center">
+                    To copy and paste your image, use <b class="text-primary">control+c and control+v</b> or <b class="text-primary">copy and paste</b> with the mouse.
+                </p>
+
+                <div class="d-flex justify-content-center">
+                    <form method="post" action="">
+                        <label>
+                            <div class="d-flex flex-column">
+                                <span>Paste the image here:</span>   
+
+                                <div class="wrapper-file">
+                                    <input type="text" class="form-control input-img" data-js="input"/>
+                                    <div class="content-img-upload" data-js="img" data-fancybox-onpaste data-src="">
+                                        <span class="btn-zoom" data-bs-toggle="tooltip" data-bs-title="Zoom" data-js="btn-zoom">
+                                            <i class="bi bi-zoom-in"></i>
+                                        </span>
+                                    </div>
+
+                                    <button type="button" class="btn btn-danger btn-del" data-js="btn-del">
+                                        <i class="bi bi-x-circle"></i> Del
+                                    </button>
+                                </div>
+                            </div>
+                        </label>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer mt-auto py-2 bg-body-tertiary">
+            <div class="container">
+              <small class="text-body-secondary">Developed by Rogério Saraceni.</small>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+        <script>
+            //Enable Fancybox
+            Fancybox.bind("[data-fancybox-onpaste]");
+
+            /*! --------------------------------------------------------------------
+            * Enable tooltips bootstrap
+            * --------------------------------------------------------------------*/
+            const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]',);
+            const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl),);
+        </script>
+
+        <script src="./assets/onpaste/onpaste.js"></script>
+    </body>
+</html>
