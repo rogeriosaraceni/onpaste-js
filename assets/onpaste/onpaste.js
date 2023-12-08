@@ -3,6 +3,7 @@
  * Version Date: 08/12/2023
  * Developed by: Rogério Saraceni
  * Licensed MIT
+ * https://github.com/rogeriosaraceni/onpaste-js
  */
 
 window.addEventListener("load", () => { 
